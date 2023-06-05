@@ -1,0 +1,123 @@
+function cube(number)
+  return number * number * number
+end
+
+function square(number)
+  return number * number
+end
+
+function factorial(number)
+  if number == 0 then
+    return 1
+  else
+    return number * factorial(number - 1)
+  end
+end
+
+function cosinus(number)
+  return math.cos(number)
+end
+
+function sinus(number)
+  return math.sin(number)
+end
+
+function tangens(number)
+  return math.tan(number)
+end
+
+function addition(num1, num2)
+  return num1 + num2
+end
+
+function subtraction(num1, num2)
+  return num1 - num2
+end
+
+function multiplication(num1, num2)
+  return num1 * num2
+end
+
+function division(num1, num2)
+  if num2 == 0 then
+    return "Error: Division by zero"
+  else
+    return num1 / num2
+  end
+end
+
+print("Choose one of this: ")
+print("1. Calculate the cube of a number")
+print("2. Calculate the square of a number")
+print("3. Calculate the factorial of a number")
+print("4. Calculate the cosinus of a number")
+print("5. Calculate the sinus of a number")
+print("6. Calculate the tangens of a number")
+print("7. Perform addition")
+print("8. Perform subtraction")
+print("9. Perform multiplication")
+print("10. Perform division")
+print("Enter your choice (1-11):")
+local choice = tonumber(io.read())
+
+if choice == 1 then
+  print("Enter a number:")
+  local number = tonumber(io.read())
+  local result = cube(number)
+  print("Cube of " .. number .. " is " .. result)
+elseif choice == 2 then
+  print("Enter a number:")
+  local number = tonumber(io.read())
+  local result = square(number)
+  print("Square of " .. number .. " is " .. result)
+elseif choice == 3 then
+  print("Enter a number:")
+  local number = tonumber(io.read())
+  local result = factorial(number)
+  print("Factorial of " .. number .. " is " .. result)
+elseif choice == 4 then
+  print("Enter a number:")
+  local number = tonumber(io.read())
+  local result = cosinus(number)
+  print("Cosinus of " .. number .. " is " .. result)
+elseif choice == 5 then
+  print("Enter a number:")
+  local number = tonumber(io.read())
+  local result = sinus(number)
+  print("Sinus of " .. number .. " is " .. result)
+elseif choice == 6 then
+  print("Enter a number:")
+  local number = tonumber(io.read())
+  local result = tangens(number)
+  print("Tangens of " .. number .. " is " .. result)
+elseif choice == 7 then
+  print("Enter the first number:")
+  local num1 = tonumber(io.read())
+  print("Enter the second number:")
+  local num2 = tonumber(io.read())
+  local result = addition(num1, num2)
+  print("Result of addition: " .. num1 .. " + " .. num2 .. " = " .. result)
+elseif choice == 8 then
+  print("Enter the first number:")
+  local num1 = tonumber(io.read())
+  print("Enter the second number:")
+  local num2 = tonumber(io.read())
+  local result = subtraction(num1, num2)
+  print("Result of subtraction: " .. num1 .. " - " .. num2 .. " = " .. result)
+elseif choice == 9 then
+  print("Enter the first number:")
+  local num1 = tonumber(io.read())
+  print("Enter the second number:")
+  local num2 = tonumber(io.read())
+  local result = multiplication(num1, num2)
+  print("Result of multiplication: " .. num1 .. " * " .. num2 .. " = " .. result)
+elseif choice == 10 then
+  print("Enter the first number:")
+  local num1 = tonumber(io.read())
+  print("Enter the second number:")
+  local num2 = tonumber(io.read())
+  local result = division(num1, num2)
+  print("Result of division: " .. num1 .. " / " .. num2 .. " = " .. result)
+else
+  print("Invalid choice!")
+end
